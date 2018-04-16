@@ -19,9 +19,9 @@ class DriverManager(unittest.TestCase):
     """
 
     def setUp(self):
-        '''
+        """
         This method is to instantiate the web driver instance.
-        '''
+        """
         logging.info("## SETUP METHOD ##")
         logging.info("# Initializing the webdriver.")
         self.driver = webdriver.Firefox(executable_path="E:\\automation\drivers\geckodriver.exe")
@@ -30,12 +30,11 @@ class DriverManager(unittest.TestCase):
         self.driver.get("http://the-internet.herokuapp.com/")
 
     def tearDown(self):
-        '''
+        """
         This is teardown method.
         It is to capture the screenshots for failed test cases,
-        & to remove web driver object.
-        '''
-
+        & to remove web driver object.\
+        """
         logging.info("## TEARDOWN METHOD ##")
 
         if sys.exc_info()[0]:
