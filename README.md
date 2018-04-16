@@ -1,1 +1,1 @@
-# PWAF
+# PWAF (Python Webdriver Automation Framework)
