@@ -1,5 +1,5 @@
 """ 
-@auther: Anuj Kumar
+@author: Anuj Kumar
 @email: cdac.anuj@gmail.com
 """
 
@@ -8,7 +8,9 @@ import unittest
 
 from selenium import webdriver
 
+logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
+import sys
 
 
 class DriverManager(unittest.TestCase):
