@@ -1,6 +1,7 @@
 """
 @author: Anuj Kumar
 @email: cdac.anuj@gmail.com
+@date: 16-Apr-18
 """
 import logging
 
@@ -19,6 +20,13 @@ class CheckboxPage:
         self.xpathCheckboxes = "//input[@type='checkbox'][%d]"
 
     def verify_checkbox_page(self):
+        """
+        This method is to verify Checkbox page.
+
+        return: instance of Checkbox page
+        rtype: CheckboxPage instance
+        """
+
         logging.info("## Verifying checkbox page ##")
         self.services.wait_for_element(self.xpathHeading)
         actual_heading = self.services.get_text_by_xpath(self.xpathHeading)
@@ -27,6 +35,18 @@ class CheckboxPage:
             actual_heading, self.header)
 
     def select_checkbox(self, index, to_select=True):
+        """
+        This method is to check or uncheck checkbox.
+        If to_select is True, then it will check the checkbox,
+        else it will un-check it
+
+        param index: Index of the checkbox on which check/un-check action has to perform.
+        type index:  number
+
+        param to_select: If True will check, otherwise will un-check. Default value is True
+        type to_select: bool
+        """
+
         logging.info("# Select or un-select checkbox.")
         xpath = self.xpathCheckboxes % index
         self.services.wait_for_element(xpath)
@@ -39,6 +59,3 @@ class CheckboxPage:
             if checkbox_ele.is_selected():
                 logging.info("# Un-selecting checkbox.")
                 checkbox_ele.click()
-
-        import time
-        time.sleep(5)

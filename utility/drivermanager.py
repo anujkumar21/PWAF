@@ -1,6 +1,7 @@
 """ 
 @author: Anuj Kumar
 @email: cdac.anuj@gmail.com
+@date: 16-Apr-18
 """
 
 import logging
@@ -33,7 +34,7 @@ class DriverManager(unittest.TestCase):
         """
         This is teardown method.
         It is to capture the screenshots for failed test cases,
-        & to remove web driver object.\
+        & to remove web driver object.
         """
         logging.info("## TEARDOWN METHOD ##")
 
