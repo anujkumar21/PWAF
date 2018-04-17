@@ -1,6 +1,6 @@
 # PWAF (Python Webdriver Automation Framework)
 
-## _Required Softwares:_
+## _Required Software:_
 
 1. Python
 2. pip
