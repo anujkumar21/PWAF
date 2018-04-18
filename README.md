@@ -16,12 +16,16 @@
 
 >nosetests -s -v --nologcapture <test-script.py>
 
->e.g.: `nosetests -s -v --nologcapture checkbox_page_test.py`
+>e.g: `nosetests -s -v --nologcapture checkbox_page_test.py`
 
 **Get Test-reports:**
 
 >nosetests -s -v --nologcapture --with-html --html-report=<test-report-file-path> <test-script.py>
 
->e.g.: `nosetests -s -v --nologcapture --with-html --html-report=test_report.html checkbox_page_test.py`
+>e.g: `nosetests -s -v --nologcapture --with-html --html-report=test_report.html checkbox_page_test.py`
 
 
+
+**_Note:_** Kindly set the respective browser's driver path either to System variable or update it in `drivermanager.py`
+
+e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in case of Firefox browser.
