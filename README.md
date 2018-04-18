@@ -1,5 +1,8 @@
 # PWAF (Python Webdriver Automation Framework)
 
+This is web automation framework, implemented using Python & Webdriver. 
+Page Object Model (POM) is used to  make the code more readable, maintainable, and reusable.
+
 ## _Prerequisite:_
 
 1. Python
