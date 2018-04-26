@@ -15,7 +15,7 @@ class DropdownPage:
     def __init__(self, driver):
         self.driver = driver
         self.services = Services(self.driver)
-        self.header = "Dropdown"
+        self.header = "Dropdown List"
         self.xpathHeading = "//h3"
         self.xpathCheckboxes = "//input[@type='checkbox'][%d]"
 
