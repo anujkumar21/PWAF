@@ -37,3 +37,44 @@ Page Object Model (POM) is used to  make the code more readable, maintainable, a
 **_Note:_** Kindly set the respective browser's driver path either to System variable or update it in `drivermanager.py`
 
 e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in case of Firefox browser.
+
+
+***
+
+## _Coverage Plan:_
+
+| Contents         |                                 | Status |
+|---------------------------|---------------------------------|--------|
+|                           |                                 |        |
+| Framework level           | Page Object Model               | Done   |
+|                           | Profiles                        |        |
+|                           | Grids                           |        |
+|                           | Cross browsers & cross platform |        |
+|                           |                                 |        |
+| Locators                  | Learning how to get locators.   |        |
+|                           |                                 |        |
+| Functionality To Automate | Challenging DOM                 |        |
+|                           | Checkboxes                      | Done   |
+|                           | Context Menu                    |        |
+|                           | Disappearing Elements           |        |
+|                           | Drag and Drop                   |        |
+|                           | Dropdown                        | Done   |
+|                           | Dynamic Content                 |        |
+|                           | Dynamic Controls                |        |
+|                           | Dynamic Loading                 |        |
+|                           | File Download                   |        |
+|                           | File Upload                     |        |
+|                           | Floating Menu                   |        |
+|                           | Frames                          |        |
+|                           | Horizontal Slider               |        |
+|                           | Hovers                          |        |
+|                           | Infinite Scroll                 |        |
+|                           | JQuery UI Menus                 |        |
+|                           | JavaScript Alerts               |        |
+|                           | Key Presses                     |        |
+|                           | Large & Deep DOM                |        |
+|                           | Multiple Windows                |        |
+|                           | Nested Frames                   |        |
+|                           | Notification Messages           |        |
+|                           | Redirect Link                   |        |
+|                           | Shifting Content                |        |
