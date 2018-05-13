@@ -5,6 +5,7 @@
 """
 import logging
 
+from pages.challenging_dom_page import ChallengingDomPage
 from pages.checkbox_page import CheckboxPage
 from pages.context_menu_page import ContextMenuPage
 from pages.dropdown_page import DropdownPage
@@ -64,4 +65,9 @@ class WelcomePage:
             context_menu_page.verify_context_menu_page()
             return context_menu_page
 
+        # Link Text: Challenging DOM
+        if link_txt == "Challenging DOM":
+            challenging_dom_page = ChallengingDomPage(self.driver)
+            challenging_dom_page.verify_challenging_dom_page()
+            return challenging_dom_page
         return self
