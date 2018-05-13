@@ -6,6 +6,7 @@
 import logging
 
 from pages.checkbox_page import CheckboxPage
+from pages.context_menu_page import ContextMenuPage
 from pages.dropdown_page import DropdownPage
 from utility.services import Services
 
@@ -56,5 +57,11 @@ class WelcomePage:
             dropdown_page = DropdownPage(self.driver)
             dropdown_page.verify_dropdown_page()
             return dropdown_page
+
+        # Link Text: Dropdown
+        if link_txt == "Context Menu":
+            context_menu_page = ContextMenuPage(self.driver)
+            context_menu_page.verify_context_menu_page()
+            return context_menu_page
 
         return self
