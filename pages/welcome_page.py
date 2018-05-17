@@ -8,6 +8,7 @@ import logging
 from pages.challenging_dom_page import ChallengingDomPage
 from pages.checkbox_page import CheckboxPage
 from pages.context_menu_page import ContextMenuPage
+from pages.disappearing_elements_page import DisappearingElementsPage
 from pages.dropdown_page import DropdownPage
 from utility.services import Services
 
@@ -70,4 +71,10 @@ class WelcomePage:
             challenging_dom_page = ChallengingDomPage(self.driver)
             challenging_dom_page.verify_challenging_dom_page()
             return challenging_dom_page
+
+        # Link Text: Disappearing Elements
+        if link_txt == "Disappearing Elements":
+            disappearing_elements_page = DisappearingElementsPage(self.driver)
+            disappearing_elements_page.verify_disappearing_elements_page()
+            return disappearing_elements_page
         return self

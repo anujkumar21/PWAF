@@ -5,6 +5,7 @@
 """
 import logging
 
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -54,3 +55,17 @@ class Services:
         """
 
         return self.driver.find_element_by_xpath(locator).text
+
+    def is_element_present(self, locator):
+        """
+        This method to is verify element is present or not.
+
+        param locator: XPATH of given element
+        param_type: string
+        """
+        try:
+            self.driver.find_element_by_xpath(locator)
+            return True
+        except NoSuchElementException:
+            logging.info("# Element '%s' is not present." % locator)
+            return False

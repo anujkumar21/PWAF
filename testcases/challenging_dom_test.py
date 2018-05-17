@@ -9,7 +9,7 @@ from utility.drivermanager import DriverManager
 
 
 class ChallengingDomPageTest(DriverManager):
-    def test_context_menu_page(self):
+    def test_challenging_dom_page(self):
         welcome_page = WelcomePage(self.driver)
         btn_lst = welcome_page.verify_welcome_page().click_on_link("Challenging DOM").get_list_of_all_buttons()
 
