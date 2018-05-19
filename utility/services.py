@@ -58,14 +58,84 @@ class Services:
 
     def is_element_present(self, locator):
         """
-        This method to is verify element is present or not.
+        This method is to verify element is present or not.
 
         param locator: XPATH of given element
         param_type: string
         """
         try:
             self.driver.find_element_by_xpath(locator)
+            logging.info("# Element '%s' is present." % locator)
             return True
         except NoSuchElementException:
             logging.info("# Element '%s' is not present." % locator)
             return False
+
+    def assert_element_present(self, locator):
+        """
+        This method is to assert element is present or not.
+
+        param locator: XPATH of given element
+        param_type: string
+        """
+        logging.info("# Verifying Element is present.")
+        assert self.is_element_present(locator), "Element '%s' should be present." % locator
+
+    def assert_element_is_not_present(self, locator):
+        """
+        This method is to assert element is present or not.
+
+        param locator: XPATH of given element
+        param_type: string
+        """
+        logging.info("# Verifying Element is not present.")
+        assert not self.is_element_present(locator), "Element '%s' should not be present." % locator
+
+    def wait_for_element_visible(self, locator, timeout=20):
+        """
+        This method is to wait for visibility of given element for given time(default timeout = 20 secs.)
+        If element does not present in given max time, this will throw timeout exception.
+
+        param locator: XPATH of given element
+        param_type: string
+
+        param timeout: maximum wait timeout
+        param_type: number
+        """
+
+        logging.info("# Wait for element to appear... %s" % locator)
+        WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
+
+    def wait_for_element_invisible(self, locator, timeout=20):
+        """
+        This method is to wait for visibility of given element for given time(default timeout = 20 secs.)
+        If element does not present in given max time, this will throw timeout exception.
+
+        param locator: XPATH of given element
+        param_type: string
+
+        param timeout: maximum wait timeout
+        param_type: number
+        """
+
+        logging.info("# Wait for element to appear... %s" % locator)
+        WebDriverWait(self.driver, timeout).until(EC.invisibility_of_element_located((By.XPATH, locator)))
+
+    def is_element_visible(self, locator):
+        try:
+            ele = self.driver.find_element_by_xpath(locator)
+            return ele.is_displayed()
+        except NoSuchElementException:
+            logging.info("# Element '%s' is not present." % locator)
+        return False
+
+    def assert_element_visibility(self, locator, is_visible=True):
+        """
+        This method is to assert element is present or not.
+
+        param locator: XPATH of given element
+        param_type: string
+        """
+        logging.info("# Verifying Element visibility.")
+        assert is_visible == self.is_element_visible(locator), "Element '%s' visibility should be %s." % (
+            locator, is_visible)

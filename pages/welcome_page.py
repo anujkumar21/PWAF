@@ -10,6 +10,7 @@ from pages.checkbox_page import CheckboxPage
 from pages.context_menu_page import ContextMenuPage
 from pages.disappearing_elements_page import DisappearingElementsPage
 from pages.dropdown_page import DropdownPage
+from pages.dynamic_controls_page import DynamicControlsPage
 from utility.services import Services
 
 
@@ -77,4 +78,11 @@ class WelcomePage:
             disappearing_elements_page = DisappearingElementsPage(self.driver)
             disappearing_elements_page.verify_disappearing_elements_page()
             return disappearing_elements_page
+
+        # Link Text: Dynamic Controls
+        if link_txt == "Dynamic Controls":
+            dynamic_controls_page = DynamicControlsPage(self.driver)
+            dynamic_controls_page.verify_dynamic_controls_page()
+            return dynamic_controls_page
+
         return self
