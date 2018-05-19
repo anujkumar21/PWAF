@@ -11,6 +11,7 @@ from pages.context_menu_page import ContextMenuPage
 from pages.disappearing_elements_page import DisappearingElementsPage
 from pages.dropdown_page import DropdownPage
 from pages.dynamic_controls_page import DynamicControlsPage
+from pages.dynamic_loading_page import DynamicLoadingPage
 from utility.services import Services
 
 
@@ -84,5 +85,11 @@ class WelcomePage:
             dynamic_controls_page = DynamicControlsPage(self.driver)
             dynamic_controls_page.verify_dynamic_controls_page()
             return dynamic_controls_page
+
+        # Link Text: Dynamic Loading
+        if link_txt == "Dynamic Loading":
+            dynamic_loading_page = DynamicLoadingPage(self.driver)
+            dynamic_loading_page.verify_dynamic_loading_page()
+            return dynamic_loading_page
 
         return self

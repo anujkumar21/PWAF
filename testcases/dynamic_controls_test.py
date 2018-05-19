@@ -9,7 +9,7 @@ from pages.welcome_page import WelcomePage
 from utility.drivermanager import DriverManager
 
 
-class DisappearingElementsTest(DriverManager):
+class DynamicControlsTest(DriverManager):
 
     def test_removing_element_from_page(self):
         welcome_page = WelcomePage(self.driver)
