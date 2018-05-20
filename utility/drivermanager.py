@@ -26,6 +26,7 @@ class DriverManager(unittest.TestCase):
         logging.info("## SETUP METHOD ##")
         logging.info("# Initializing the webdriver.")
         self.driver = webdriver.Firefox(executable_path="E:\\automation\drivers\geckodriver.exe")
+        #self.driver = webdriver.Chrome(executable_path="E:\\automation\drivers\chromedriver.exe")
         self.driver.maximize_window()
         self.driver.implicitly_wait(5)
         self.driver.get("http://the-internet.herokuapp.com/")
