@@ -39,6 +39,7 @@ class ContextMenuPage:
 
     def perform_right_click(self):
         self.services.wait_for_element(self.hot_spot)
+        logging.info('## Find element on which right click need to perform. ##')
         hot_spot_ele = self.driver.find_element_by_xpath(self.hot_spot)
 
         actions = ActionChains(self.driver)

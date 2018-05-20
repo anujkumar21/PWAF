@@ -43,7 +43,7 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 
 ## _Coverage Plan:_
 
-| Contents         |                                 | Status |
+| Contents                  |                                 | Status |
 |---------------------------|---------------------------------|--------|
 |                           |                                 |        |
 | Framework level           | Page Object Model               | Done   |
@@ -53,15 +53,15 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |                           |                                 |        |
 | Locators                  | Learning how to get locators.   |        |
 |                           |                                 |        |
-| Functionality To Automate | Challenging DOM                 |        |
+| Functionality To Automate | Challenging DOM                 | Done   |
 |                           | Checkboxes                      | Done   |
-|                           | Context Menu                    |        |
-|                           | Disappearing Elements           |        |
-|                           | Drag and Drop                   |        |
+|                           | Context Menu                    | Done   |
+|                           | Disappearing Elements           | Done   |
+|                           | Drag and Drop                   | Done   |
 |                           | Dropdown                        | Done   |
 |                           | Dynamic Content                 |        |
-|                           | Dynamic Controls                |        |
-|                           | Dynamic Loading                 |        |
+|                           | Dynamic Controls                | Done   |
+|                           | Dynamic Loading                 | Done   |
 |                           | File Download                   |        |
 |                           | File Upload                     |        |
 |                           | Floating Menu                   |        |
@@ -78,3 +78,4 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |                           | Notification Messages           |        |
 |                           | Redirect Link                   |        |
 |                           | Shifting Content                |        |
+------------------------------------------------------------------------

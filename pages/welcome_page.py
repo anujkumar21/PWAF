@@ -5,9 +5,13 @@
 """
 import logging
 
+from pages.challenging_dom_page import ChallengingDomPage
 from pages.checkbox_page import CheckboxPage
 from pages.context_menu_page import ContextMenuPage
+from pages.disappearing_elements_page import DisappearingElementsPage
 from pages.dropdown_page import DropdownPage
+from pages.dynamic_controls_page import DynamicControlsPage
+from pages.dynamic_loading_page import DynamicLoadingPage
 from utility.services import Services
 
 
@@ -63,5 +67,29 @@ class WelcomePage:
             context_menu_page = ContextMenuPage(self.driver)
             context_menu_page.verify_context_menu_page()
             return context_menu_page
+
+        # Link Text: Challenging DOM
+        if link_txt == "Challenging DOM":
+            challenging_dom_page = ChallengingDomPage(self.driver)
+            challenging_dom_page.verify_challenging_dom_page()
+            return challenging_dom_page
+
+        # Link Text: Disappearing Elements
+        if link_txt == "Disappearing Elements":
+            disappearing_elements_page = DisappearingElementsPage(self.driver)
+            disappearing_elements_page.verify_disappearing_elements_page()
+            return disappearing_elements_page
+
+        # Link Text: Dynamic Controls
+        if link_txt == "Dynamic Controls":
+            dynamic_controls_page = DynamicControlsPage(self.driver)
+            dynamic_controls_page.verify_dynamic_controls_page()
+            return dynamic_controls_page
+
+        # Link Text: Dynamic Loading
+        if link_txt == "Dynamic Loading":
+            dynamic_loading_page = DynamicLoadingPage(self.driver)
+            dynamic_loading_page.verify_dynamic_loading_page()
+            return dynamic_loading_page
 
         return self
