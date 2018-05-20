@@ -9,9 +9,11 @@ from pages.challenging_dom_page import ChallengingDomPage
 from pages.checkbox_page import CheckboxPage
 from pages.context_menu_page import ContextMenuPage
 from pages.disappearing_elements_page import DisappearingElementsPage
+from pages.drag_and_drop_page import DragAndDropPage
 from pages.dropdown_page import DropdownPage
 from pages.dynamic_controls_page import DynamicControlsPage
 from pages.dynamic_loading_page import DynamicLoadingPage
+from pages.jquery_ui_menu_page import JQueryUIMenuPage
 from utility.services import Services
 
 
@@ -91,5 +93,17 @@ class WelcomePage:
             dynamic_loading_page = DynamicLoadingPage(self.driver)
             dynamic_loading_page.verify_dynamic_loading_page()
             return dynamic_loading_page
+
+        # Link Text: Dynamic Loading
+        if link_txt == "Drag and Drop":
+            drag_and_drop_page = DragAndDropPage(self.driver)
+            drag_and_drop_page.verify_drag_and_drop_page()
+            return drag_and_drop_page
+
+        # Link Text: JQuery UI Menus
+        if link_txt == "JQuery UI Menus":
+            jquery_menu_page = JQueryUIMenuPage(self.driver)
+            jquery_menu_page.verify_jquery_menu_page()
+            return jquery_menu_page
 
         return self
