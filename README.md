@@ -78,4 +78,3 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |                           | Notification Messages           |        |
 |                           | Redirect Link                   |        |
 |                           | Shifting Content                |        |
-------------------------------------------------------------------------
