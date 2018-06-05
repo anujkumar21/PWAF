@@ -47,7 +47,7 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |---------------------------|---------------------------------|--------|
 |                           |                                 |        |
 | Framework level           | Page Object Model               | Done   |
-|                           | Profiles                        |        |
+|                           | Profiles                        | Done   |
 |                           | Grids                           |        |
 |                           | Cross browsers & cross platform |        |
 |                           |                                 |        |
@@ -62,10 +62,10 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |                           | Dynamic Content                 |        |
 |                           | Dynamic Controls                | Done   |
 |                           | Dynamic Loading                 | Done   |
-|                           | File Download                   |        |
-|                           | File Upload                     |        |
+|                           | File Download                   | Done   |
+|                           | File Upload                     | Done   |
 |                           | Floating Menu                   |        |
-|                           | Frames                          |        |
+|                           | Frames                          | Done   |
 |                           | Horizontal Slider               |        |
 |                           | Hovers                          | Done   |
 |                           | Infinite Scroll                 |        |
@@ -73,8 +73,8 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |                           | JavaScript Alerts               |        |
 |                           | Key Presses                     |        |
 |                           | Large & Deep DOM                |        |
-|                           | Multiple Windows                |        |
-|                           | Nested Frames                   |        |
+|                           | Multiple Windows                | Done   |
+|                           | Nested Frames                   | Done   |
 |                           | Notification Messages           |        |
 |                           | Redirect Link                   |        |
 |                           | Shifting Content                |        |
