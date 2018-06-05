@@ -1,10 +1,9 @@
-""" 
-@author: Prerna Pal
-@email: prerna.chanchal13@gmail.com
-@date: 20-May-18
+"""
+@author: Anuj Kumar
+@email: cdac.anuj@gmail.com
+@date: 05-June-18
 """
 from pages.file_down_loading_page import FileDownLoadingPage
-from pages.hovers_page import HoversPage
 from pages.welcome_page import WelcomePage
 from utility.drivermanager import DriverManager
 
@@ -17,4 +16,3 @@ class FileDownLoadingTest(DriverManager):
         file_download = FileDownLoadingPage(self.driver)
         file_download.verify_file_downloader_page()
         file_download.verify_file_downloading("shank.txt")
-
