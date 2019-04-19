@@ -25,7 +25,7 @@ Page Object Model (POM) is used to  make the code more readable, maintainable, a
 
 >nosetests -s -v --nologcapture  -a group=<group-name> <test-script.py>
 
->e.g: `nosetests -s -v --nologcapture group=smoke all_tests.py`
+>e.g: `nosetests -s -v --nologcapture -a group=smoke all_tests.py`
 
 **Get Test-reports:**
 
@@ -37,6 +37,9 @@ Page Object Model (POM) is used to  make the code more readable, maintainable, a
 **_Note:_** Kindly set the respective browser's driver path either to System variable or update it in `drivermanager.py`
 
 e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in case of Firefox browser.
+
+## _Execution:_
+![Execution](https://github.com/anujkumar21/PWAF/blob/master/execution.gif)
 
 
 ***
@@ -78,3 +81,8 @@ e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in ca
 |                           | Notification Messages           |        |
 |                           | Redirect Link                   |        |
 |                           | Shifting Content                |        |
+
+
+
+
+
