@@ -19,21 +19,231 @@
     </section>
 
     <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+      <h1>
+<a id="pwaf-python-webdriver-automation-framework" class="anchor" href="#pwaf-python-webdriver-automation-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PWAF (Python Webdriver Automation Framework)</h1>
+<p>This is web automation framework, implemented using Python &amp; Webdriver.
+Page Object Model (POM) is used to  make the code more readable, maintainable, and reusable.</p>
+<h2>
+<a id="prerequisite" class="anchor" href="#prerequisite" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>Prerequisite:</em>
+</h2>
+<ol>
+<li>Python</li>
+<li>pip</li>
+<li>Selenium/WebDriver</li>
+<li>nosetests &amp; nose-html-reporting</li>
+<li>Browsers (Firefox, Chrome, IE)</li>
+<li>Respective Browser drivers</li>
+<li>Pycharm</li>
+</ol>
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/defunkt/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/defunkt">@defunkt</a>), PJ Hyett (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/pjhyett/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/pjhyett">@pjhyett</a>), and Tom Preston-Werner (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/mojombo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/mojombo">@mojombo</a>) founded GitHub.</p>
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<a id="how-to-run" class="anchor" href="#how-to-run" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to run?</h3>
+<p><strong>Test scripts can be executed by nosetests:</strong></p>
+<blockquote>
+<p>nosetests -s -v --nologcapture &lt;test-script.py&gt;</p>
+</blockquote>
+<blockquote>
+<p>e.g: <code>nosetests -s -v --nologcapture checkbox_page_test.py</code></p>
+</blockquote>
+<p><strong>Execute different group of test:</strong></p>
+<blockquote>
+<p>nosetests -s -v --nologcapture  -a group= &lt;test-script.py&gt;</p>
+</blockquote>
+<blockquote>
+<p>e.g: <code>nosetests -s -v --nologcapture -a group=smoke all_tests.py</code></p>
+</blockquote>
+<p><strong>Get Test-reports:</strong></p>
+<blockquote>
+<p>nosetests -s -v --nologcapture --with-html --html-report= &lt;test-script.py&gt;</p>
+</blockquote>
+<blockquote>
+<p>e.g: <code>nosetests -s -v --nologcapture --with-html --html-report=test_report.html checkbox_page_test.py</code></p>
+</blockquote>
+<p><strong><em>Note:</em></strong> Kindly set the respective browser's driver path either to System variable or update it in <code>drivermanager.py</code></p>
+<p>e.g: self.driver = webdriver.Firefox(executable_path="geckodriver path") # in case of Firefox browser.</p>
+<h2>
+<a id="execution" class="anchor" href="#execution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>Execution:</em>
+</h2>
+<p><img src="https://github.com/anujkumar21/PWAF/blob/master/execution.gif" alt="Execution"></p>
+<hr>
+<h2>
+<a id="coverage-plan" class="anchor" href="#coverage-plan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>Coverage Plan:</em>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Contents</th>
+<th></th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Framework level</td>
+<td>Page Object Model</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Profiles</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Grids</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Cross browsers &amp; cross platform</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Locators</td>
+<td>Learning how to get locators.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Functionality To Automate</td>
+<td>Challenging DOM</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Checkboxes</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Context Menu</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Disappearing Elements</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Drag and Drop</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Dropdown</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Dynamic Content</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Dynamic Controls</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Dynamic Loading</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>File Download</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>File Upload</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Floating Menu</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Frames</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Horizontal Slider</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Hovers</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Infinite Scroll</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>JQuery UI Menus</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>JavaScript Alerts</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Key Presses</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Large &amp; Deep DOM</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Multiple Windows</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Nested Frames</td>
+<td>Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Notification Messages</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Redirect Link</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Shifting Content</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/anujkumar21/PWAF">Pwaf</a> is maintained by <a href="https://github.com/anujkumar21">anujkumar21</a>.</span>
